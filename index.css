@@ -1,27 +1,27 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: rgb(252, 252, 252);
+    background-color: #fff;
 }
 
-h1, a {
+h1{
     font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 1.2rem;
+    font-weight: 600;
+    font-size: 1.5rem;
 }
 
 header {
-    color: #fff;
-    background-color: #0053d5;
-    margin: -21px -10px;
+    color: #060768;
+    background-color: #fff;
+    margin: -21px -8px;
 
-    height: 8vh;
-    padding-top: 2.3vh;
+    height: 10vh;
+    padding-top: 3vh;
     padding-left: 20vw;
 
     display: flex;
     overflow: hidden ;
 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
 }
 
 nav {
@@ -29,7 +29,7 @@ nav {
     margin-top: 0px;
 
     position: relative;
-    left: 27vw;
+    left: 30vw;
 }
   
 nav li {
@@ -39,15 +39,78 @@ nav li {
   
 nav a {
   text-decoration: none;
-  color: #fff;
+  color: #060768;
+
+  font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    font-size: 1.2rem;
 }
 nav a:hover {
+    background-color: #060768;
     color: #fff;
+    font-weight: 400;
+
+    padding: 1vh 1vw 0.6vw 1vw;
 }
   
 nav a:active {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
 }
-  
+
+#text-home-container {
+    margin-top: 25vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#proverb {
+    background-color: #060768;
+    color: #fff;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+
+    min-width: 15%;
+    max-width: 20%;
+
+    overflow: hidden;
+    font-size: 1rem;
+    text-align: center;
+}
+
+#text-home {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+p {
+    text-align: center; 
+}
+
+.menu-icon {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .menu-icon {
+        display: inline;
+        float: right;
+        font-size: 24px;
+        margin-right: 20px;
+    }
+    #menu-h {
+        display: none;
+    }
+    .menu-show {
+        display: block !important;
+    }
+    .menu-hide {
+        display: none !important;
+    }
+}
 

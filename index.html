@@ -18,21 +18,36 @@
 
 <body>
     <header>
-        <h1>Jeová Jr Aguiar</h1>
-        <nav id="menu-h">
+        <h1>Aguiar</h1>
+        <a href="#" class="menu-icon" onclick="toggleMenu()">&#9776;</a>
+        <nav id="menu-h" class="menu-hide">
             <ul>
-                <li>
-                    <a href="https://satellasoft.com">
-                        Home
-                    </a>
-                </li>
-
+                <li><a href="https://satellasoft.com">Home</a></li>
                 <li><a href="#">Projects</a></li>
                 <li><a href="#">Volunteering</a></li>
                 <li><a href="#">About</a></li>
             </ul>
         </nav>
     </header>
+    <section id="text-home-container">
+        <p id="text-home">As a man thinks in his heart, so is he.</p>
+        <div id="proverb">
+            Proverbs 23:7
+        </div>
+    </section>
+
+
 </body>
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById("menu-h");
+        if (menu.className === "menu-hide") {
+            menu.className = "menu-show";
+        } else {
+            menu.className = "menu-hide";
+        }
+    }
+
+</script>
 
 </html>
