@@ -45,6 +45,15 @@ nav a {
     font-weight: 200;
     font-size: 1.2rem;
 }
+footer nav a {
+    text-decoration: none;
+    color: #c20303;
+  
+    font-family: 'Roboto', sans-serif;
+      font-weight: 200;
+      font-size: 1.2rem;
+}
+
 nav a:hover {
     background-color: #060768;
     color: #fff;
@@ -124,3 +133,19 @@ p {
     }
 }
 
+footer {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    font-size: 0.8rem;
+
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #060768;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+  
