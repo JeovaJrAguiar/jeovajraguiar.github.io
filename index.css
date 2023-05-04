@@ -48,14 +48,14 @@ nav a {
 nav a:hover {
     background-color: #060768;
     color: #fff;
-    font-weight: 400;
+    font-weight: 200;
 
     padding: 1vh 1vw 0.6vw 1vw;
 }
   
 nav a:active {
     font-family: 'Roboto', sans-serif;
-    font-weight: 700;
+    font-weight: 200;
 }
 
 #text-home-container {
@@ -75,10 +75,20 @@ nav a:active {
 
     min-width: 15%;
     max-width: 20%;
+    font-weight: 500;
 
     overflow: hidden;
     font-size: 1rem;
     text-align: center;
+}
+
+
+#icon-nav-current {
+    background-color: #060768;
+    color: #fff;
+    font-weight: 200;
+
+    padding: 1vh 1vw 0.6vw 1vw;
 }
 
 #text-home {
