@@ -50,21 +50,21 @@ footer nav a {
     color: #c20303;
   
     font-family: 'Roboto', sans-serif;
-      font-weight: 200;
+      font-weight: 300;
       font-size: 1.2rem;
 }
 
 nav a:hover {
     background-color: #060768;
     color: #fff;
-    font-weight: 200;
+    font-weight: 300;
 
     padding: 1vh 1vw 0.6vw 1vw;
 }
   
 nav a:active {
     font-family: 'Roboto', sans-serif;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 #text-home-container {
@@ -135,7 +135,7 @@ p {
 
 footer {
     font-family: 'Roboto', sans-serif;
-    font-weight: 100;
+    font-weight: 200;
     font-size: 0.8rem;
 
 
