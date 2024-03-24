@@ -1,0 +1,24 @@
+<header>
+    <h1>Aguiar</h1>
+    <a href="#" class="menu-icon" onclick="toggleMenu()">&#9776;</a>
+    <nav id="menu-h" class="menu-hide">
+        <ul>
+            <li><a href="./" id="home">Home</a></li>
+            <li><a href="./projects.html" id="projects">Projects</a></li>
+            <li><a href="./volunteering.html" id="volunteering">Volunteering</a></li>
+            <li><a href="./about.html" id="about">About</a></li>
+            <li><a href="./blog.html" id="blog">Blog</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        const emphasis = '{{ emphasis }}';
+        const elementId = emphasis === 'home' || emphasis === 'projects' || emphasis === 'volunteering' || emphasis === 'about' || emphasis === 'blog' ? emphasis : null;
+    
+        if (elementId) {
+            const element = document.getElementById(elementId);
+            if (element) 
+                element.classList.add('icon-nav-current');
+        }
+    </script>   
+</header>

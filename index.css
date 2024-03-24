@@ -116,7 +116,7 @@ nav a:active {
 }
 
 
-#icon-nav-current {
+.icon-nav-current {
     background-color: var(--purpleLightColor);
     color: var(--whiteColor);
     font-weight: 200;
@@ -181,9 +181,9 @@ footer {
 
 }
 
-// blog content styles
 .content-blog {
-    max-width: 100%;
+    max-width: 70%;
     display: flex;
     overflow: hidden;
+    margin-left: 17rem;
 }
