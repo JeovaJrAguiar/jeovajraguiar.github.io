@@ -16,13 +16,6 @@
     --orangeLightColor: #ff8c00;
 }
 
-
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color:;
-    
-}
-
 html {
     font-family: Nunito, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-size: 14px;
@@ -125,7 +118,7 @@ nav a:active {
 
 #icon-nav-current {
     background-color: var(--purpleLightColor);
-    color: #fff;
+    color: var(--whiteColor);
     font-weight: 200;
 
     padding: 1vh 1vw 0.6vw 1vw;
@@ -186,4 +179,11 @@ footer {
     text-align: center !important;
     padding: 5px;
 
+}
+
+// blog content styles
+.content-blog {
+    max-width: 100%;
+    display: flex;
+    overflow: hidden;
 }
