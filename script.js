@@ -1,6 +1,6 @@
 // Função para carregar e exibir o cabeçalho
 function loadHeader() {
-    fetch('./component/header.html')
+    fetch('./component/header/header.html')
         .then(response => response.text())
         .then(data => {
             console.log(data); 

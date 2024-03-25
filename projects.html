@@ -17,19 +17,7 @@
 </head>
 
 <body>
-    <header>
-        <h1>Aguiar</h1>
-        <a href="#" class="menu-icon" onclick="toggleMenu()">&#9776;</a>
-        <nav id="menu-h" class="menu-hide">
-            <ul>
-                <li><a href="./">Home</a></li>
-                <li><a href="./projects.html"  class="icon-nav-current">Projects</a></li>
-                <li><a href="./volunteering.html">Volunteering</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./blog.html">Blog</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div id="header-container"></div>
     <section id="text-home-container">
         <p id="text-home">o que você fez para chegar a esse nível, não é o mesmo que fará para chegar ao próximo</p>
         <div id="proverb">
@@ -39,7 +27,8 @@
     <footer>
         <span>&copy; 2024. Aguiar - Software Developer. </span>
     </footer>
-
+    
+    <script src="script.js"></script>
 </body>
 <script>
     function toggleMenu() {

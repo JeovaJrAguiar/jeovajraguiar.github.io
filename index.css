@@ -18,7 +18,6 @@
 
 html {
     font-family: Nunito, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-size: 14px;
     font-weight: 400;
     line-height: 1.6;
     -webkit-text-size-adjust: 100%;
@@ -26,32 +25,27 @@ html {
     color: var(--greyColor);
 }
 
-h1{
-    font-family: 'Roboto', sans-serif;
-    font-weight: 600;
-    font-size: 1.5rem;
-    color:var(--whiteColor);
-}
 
 header {
     color: var(--whiteColor);
     background-color: var(--blueDarkDefaultColor);
-    margin: -21px -8px;
 
-    height: 10vh;
-    padding-top: 3vh;
-    padding-left: 20vw;
+    height: 15vh;
+    padding-top: 2vh;
+    padding-left: 7vw;
 
     display: flex;
     overflow: hidden;
 }
 
-nav {
+header > nav {
     list-style: none;
-    margin-top: 0px;
+    padding-top: 2vh;
 
     position: relative;
-    left: 30vw;
+    left: 35vw;
+
+    background-color: var(--blueDarkDefaultColor);
 }
   
 nav li {
@@ -90,7 +84,7 @@ nav a:active {
 }
 
 #text-home-container {
-    margin-top: 25vh;
+    margin-top: 5vh;
 
     display: flex;
     justify-content: center;
@@ -100,18 +94,15 @@ nav a:active {
     color: var(--whiteColor);
 }
 
-#proverb {
+.proverb {
     background-color: var(--pinkLightColor);
     color: var(--whiteColor);
-    padding-top: 1vh;
-    padding-bottom: 1vh;
 
     min-width: 15%;
     max-width: 20%;
-    font-weight: 500;
+    padding-bottom: 10vh;
 
     overflow: hidden;
-    font-size: 1rem;
     text-align: center;
 }
 
@@ -131,12 +122,9 @@ nav a:active {
     font-size: 1.2rem;
 }
 
-p {
-    color: var(--greyColor); 
-    font-size: small;
-}
 
 h1, h2, h3, h4, h5, h6 {
+    color:var(--whiteColor);
     font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
@@ -181,9 +169,51 @@ footer {
 
 }
 
+
+
+
+h1 > .bold{
+    font-weight: bold;
+    font-size: 35px;
+}
+
+h2 > .bold{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+h3 > .bold{
+    font-weight: bold;
+    font-size: 25px;
+}
+
+h4 > .bold{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+h5 > .bold{
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.main-subject {
+    margin-top: 5vh;
+
+    display: flex;
+    flex-direction: column;
+
+    color: var(--whiteColor);
+}
+
 .content-blog {
     max-width: 70%;
     display: flex;
     overflow: hidden;
-    margin-left: 17rem;
+    margin-left: 10rem;
+}
+
+#title-article {
+    font-weight:bold;
+    font-size: 35px;
 }
