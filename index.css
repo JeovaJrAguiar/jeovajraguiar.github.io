@@ -221,7 +221,7 @@ h5 > .bold{
     color: var(--redLightColor);
 }
 
-#title-article {
+.title-article {
     font-weight:bold;
     font-size: 35px;
 }
@@ -234,30 +234,39 @@ h5 > .bold{
 
 .color-pinkLightColor {
     background-color: var(--blueDarkTernaryColor);
-    color: #ff508f;
+    color: var(--pinkLightColor);
     text-shadow: none;
 }
 
-.bg-pinkLightColor {
-    background: #ff508f;
-    color: #fff;
+code {
+    background-color: var(--blueDarkTernaryColor);
+    color: var(--pinkLightColor);
     text-shadow: none;
 }
+
 
 .bg-orangeLightColor {
-    background: #ff8c00;
-    color: #fff;
+    background: var(--orangeLightColor);
+    color: var(--whiteColor);
     text-shadow: none;
 }
 
 .bg-greenLightColor {
-    background: #11d15e;
-    color: #fff;
+    background: var(--greenLightColor);
+    color: var(--whiteColor);
     text-shadow: none;
 }
 
 .bg-purpleLightColor {
-    background: #8625d2;
-    color: #fff;
+    background: var(--purpleLightColor);
+    color: var(--whiteColor);
     text-shadow: none;
+}
+
+italic {
+    font-style: italic;
+}
+
+bold {
+    font-weight: bold;
 }

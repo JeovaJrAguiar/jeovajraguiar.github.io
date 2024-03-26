@@ -1,0 +1,16 @@
+<h3>Abstract</h3>
+
+Criptografia é a ciência que torma possível a comunicação na rede e a transmissão segura de dados. Na era moderna de e-commerce e e-businnes a proteção da confidencialidade, integridade e disponibilidade (tríade CID) no armazenamento e transmissão de informação é crucial. 
+Desoxirribonucléico ácido (DNA) é uma molécula genérica consistindo de dois fios que se enrrolam para formar uma estrutua de dupla hélice e a estutura que estrutura-se como a espinha dorçal de cada fio é feita de desoxirribose e grupo fostato. A cada açucar está ligada a uma das quatros bases Adenina(A), Citosina (C), Guanina (G) e Tinina (T).
+O que inspirou a idéia de criptogragia de DNA é a capacidade em moléculas de DNA de armazenar, processar e transmitir informação.
+Estamos falando de técnicas rápidas, emergentes e não convencionais de combinar características químicas de DNA biológico com criptogragia clássica para transmitir dados em segurança.
+
+
+<h3>1. Introduction</h3>
+
+Como já destacado a era moderda conta com uma termo importante, que é ciber segurança. A proteção da confidencialidade, integridade e disponibilidade no armazenamento de informações deve ser um dos focos principais e a criptografia é a chave para essas características serem mantidas.
+Estamos aqui tratando de ciência que proteje os dados e a comunição na rede atravéz da aplicação de matemática e lógica para projetar metodos forte s de encriptação. Em outras palavras, criptografia pode ser definido como o estudo e a prática de técnicas para converter mensagens origianis em códigos não legíveis a olho humano.
+Primordialmente criptografia era limitada a defesa nacionail e diplomacia governamental, ou seja, a governos. Mas na era moderna o uso da criptografia é realizado em larga escala em todos os aspectos do dia a dia na vida cotidiana, desde proteção da privacidade ao transmitir informação em um chat até a sua aplicação em cartões de crédito bancários.
+E claramente o não uso da mesma de maneira correta em sistemas com informações é causa de ataques em torno do mundo.
+
+Como já citado a idéia por de trás da criptografia DNA advém do fato que a molécuda DNa possui as capacidade citadas anteriormente
