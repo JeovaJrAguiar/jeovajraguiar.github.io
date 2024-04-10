@@ -48,7 +48,7 @@ header > nav {
     padding-top: 2vh;
 
     position: relative;
-    left: 35vw;
+    left: 20vw;
 
     background-color: var(--blueDarkDefaultColor);
 }
@@ -269,4 +269,14 @@ italic {
 
 bold {
     font-weight: bold;
+}
+
+
+table > thead {
+    border: var(--greyColor) solid 5px;
+}
+
+table > tbody {
+    border: var(--greyColor) solid 3px;
+    font-size: 20px;
 }
