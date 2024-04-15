@@ -278,5 +278,5 @@ table > thead {
 
 table > tbody {
     border: var(--greyColor) solid 3px;
-    font-size: 20px;
+        font-size: 20px;
 }
