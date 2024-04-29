@@ -105,12 +105,11 @@ nav a:active {
 
     min-width: 15%;
     max-width: 20%;
-    padding-bottom: 10vh;
+    padding-bottom: 10vh;   
 
     overflow: hidden;
     text-align: center;
 }
-
 
 .icon-nav-current {
     background-color: var(--purpleLightColor);
