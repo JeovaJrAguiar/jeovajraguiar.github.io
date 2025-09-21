@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aguiar - Exemplos LaTeX</title>
+    <link rel="stylesheet" type="text/css" href="./index.css" media="screen" />
+
+    <!-- LaTeX-style fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+    
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+
+</head>
+
+<body>
+    <div id="header-container"></div>
+    
+    <main class="content-blog">
+        <article class="main-subject">
+            <h1>Guia de Uso: LaTeX no seu GitHub Pages</h1>
+            
+            <div class="abstract">
+                Este documento demonstra como usar sintaxe LaTeX para criar fórmulas matemáticas e melhorar a apresentação acadêmica do seu site.
+            </div>
+            
+            <section>
+                <h2>Fórmulas Inline</h2>
+                <p>
+                    Para inserir fórmulas no meio do texto, use <code>$formula$</code>. 
+                    Por exemplo: A equação mais famosa da física é $E = mc^2$, onde $E$ é a energia, 
+                    $m$ é a massa e $c$ é a velocidade da luz.
+                </p>
+                
+                <p>
+                    Outros exemplos: $\alpha + \beta = \gamma$, $\sum_{i=1}^{n} x_i$, $\int_0^1 f(x)dx$.
+                </p>
+            </section>
+            
+            <section>
+                <h2>Fórmulas em Bloco</h2>
+                <p>
+                    Para fórmulas em destaque, use <code>$$formula$$</code>:
+                </p>
+                
+                <h3>Identidade de Euler</h3>
+                $$e^{i\pi} + 1 = 0$$
+                
+                <h3>Fórmula Quadrática</h3>
+                $$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
+                
+                <h3>Integral Gaussiana</h3>
+                $$\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}$$
+                
+                <h3>Equação de Schrödinger</h3>
+                $$i\hbar\frac{\partial}{\partial t} \Psi(\mathbf{r},t) = \hat{H} \Psi(\mathbf{r},t)$$
+            </section>
+            
+            <section>
+                <h2>Matrizes e Sistemas</h2>
+                <p>Exemplo de matriz:</p>
+                $$\begin{pmatrix}
+                a & b \\
+                c & d
+                \end{pmatrix}
+                \begin{pmatrix}
+                x \\
+                y
+                \end{pmatrix}
+                =
+                \begin{pmatrix}
+                ax + by \\
+                cx + dy
+                \end{pmatrix}$$
+                
+                <p>Sistema de equações:</p>
+                $$\begin{cases}
+                x + y = 5 \\
+                2x - y = 1
+                \end{cases}$$
+            </section>
+            
+            <section>
+                <h2>Símbolos Comuns em Criptografia</h2>
+                <p>Aqui estão alguns símbolos úteis para suas pesquisas em criptografia:</p>
+                
+                <ul>
+                    <li>Operações: $\oplus$ (XOR), $\land$ (AND), $\lor$ (OR), $\neg$ (NOT)</li>
+                    <li>Conjuntos: $\mathbb{Z}$ (inteiros), $\mathbb{R}$ (reais), $\mathbb{C}$ (complexos)</li>
+                    <li>Criptografia: $\text{Enc}_k(m)$ (encriptação), $\text{Dec}_k(c)$ (decriptação)</li>
+                    <li>Probabilidade: $\Pr[X = x]$, $\mathbb{E}[X]$ (valor esperado)</li>
+                    <li>Complexidade: $O(n)$, $\Theta(n)$, $\Omega(n)$</li>
+                </ul>
+                
+                <h3>Exemplo: Segurança Semântica</h3>
+                <p>Um esquema de criptografia é semanticamente seguro se:</p>
+                $$\Pr[\mathcal{A}(\text{Enc}_k(m_0)) = 1] - \Pr[\mathcal{A}(\text{Enc}_k(m_1)) = 1] \leq \text{negl}(\lambda)$$
+            </section>
+            
+            <section>
+                <h2>Como Usar</h2>
+                <p>Para usar LaTeX no seu site:</p>
+                
+                <ol>
+                    <li>Inclua o MathJax no <code>&lt;head&gt;</code> de suas páginas HTML</li>
+                    <li>Use <code>$formula$</code> para fórmulas inline</li>
+                    <li>Use <code>$$formula$$</code> para fórmulas em bloco</li>
+                    <li>Use comandos LaTeX padrão: <code>\frac{}{}</code>, <code>\sum</code>, <code>\int</code>, etc.</li>
+                </ol>
+                
+                <blockquote>
+                    <strong>Dica:</strong> Este formato é perfeito para artigos acadêmicos, papers, 
+                    e documentação técnica. O estilo visual imita documentos LaTeX tradicionais, 
+                    dando um aspecto profissional e acadêmico ao seu site.
+                </blockquote>
+            </section>
+        </article>
+    </main>
+    
+    <div id="footer-container"></div>
+    
+    <script src="script.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            loadHeader('latex');
+            loadFooter();
+        });
+    </script>
+</body>
+
+</html>

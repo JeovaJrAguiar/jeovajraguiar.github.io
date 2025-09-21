@@ -5,46 +5,112 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aguiar</title>
+    <title>Aguiar - About</title>
     <link rel="stylesheet" type="text/css" href="./index.css" media="screen" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap">
+    <!-- LaTeX-style fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- MathJax for LaTeX support -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
 
 </head>
 
 <body>
     <div id="header-container"></div>
-    <section class="content-blog">
-        <div class="main-subject">
-            <h1 id="title-article">Quem é esse rapaz</h1>
-            <p class="color-greyColor">
-                Graduando em Ciência da Computação pela Universidade Federal do Ceará (2020). É pesquisador no Grupo de Pesquisa em Segurança da Informação e Proteção da Privacidade (GSIPP) e pelo mesmo grupo de pesquisa é Analista de Segurança atuando nas áreas: segurança de redes, criptografia e Internet das Coisas. É membro da Technical Leadership Community, TLC-BR, comunidade de liderança técnica dentro da IBM. Possui experiência no mercado de desenvolvimento de software (3 anos) e atualmente é Desenvolvedor de Software na International Business Machine - IBM. Como principal diferencial possui experiência em atividades (Voluntárias, Extracurriculares e Liderança) de ensino em Linguagens Formais e Autômatos, Desenvolvimento de Software, Segurança de Redes, Algoritmos, Resolução de Problemas e Carreira, tanto em projetos da Universidade Federal do Ceará quanto na IBM. Possui como área de interesse: Criptografia Quântica, Criptografia Clássica, Segurança de Redes, Desenvolvimento de Software e Teoria da Computação.
-            </p>
-        <div class="secondary-subject">
-
-        </div>
-        
-    </section>
-    <footer>
-        <span>&copy; 2024. Aguiar - Software Developer. </span>
-    </footer>
+    
+    <main class="content-blog">
+        <article class="main-subject">
+            <h1>Sobre o Autor</h1>
+            
+            <div class="abstract">
+                Graduando em Ciência da Computação com foco em segurança da informação, criptografia e desenvolvimento de software.
+            </div>
+            
+            <section>
+                <h2>Formação Acadêmica</h2>
+                <p>
+                    Graduando em <strong>Ciência da Computação</strong> pela <em>Universidade Federal do Ceará</em> (2020). 
+                    Pesquisador no <strong>Grupo de Pesquisa em Segurança da Informação e Proteção da Privacidade (GSIPP)</strong>, 
+                    atuando como Analista de Segurança nas áreas de segurança de redes, criptografia e Internet das Coisas.
+                </p>
+            </section>
+            
+            <section>
+                <h2>Experiência Profissional</h2>
+                <p>
+                    Atualmente trabalha como <strong>Desenvolvedor de Software</strong> na <em>International Business Machine - IBM</em>, 
+                    com 3 anos de experiência no mercado de desenvolvimento de software. É membro da 
+                    <strong>Technical Leadership Community (TLC-BR)</strong>, comunidade de liderança técnica dentro da IBM.
+                </p>
+            </section>
+            
+            <section>
+                <h2>Atividades de Ensino</h2>
+                <p>
+                    Possui experiência diferenciada em atividades de ensino (voluntárias, extracurriculares e liderança) em:
+                </p>
+                <ul>
+                    <li>Linguagens Formais e Autômatos</li>
+                    <li>Desenvolvimento de Software</li>
+                    <li>Segurança de Redes</li>
+                    <li>Algoritmos</li>
+                    <li>Resolução de Problemas</li>
+                    <li>Orientação de Carreira</li>
+                </ul>
+                <p>
+                    Essas atividades são desenvolvidas tanto em projetos da <em>Universidade Federal do Ceará</em> quanto na <em>IBM</em>.
+                </p>
+            </section>
+            
+            <section>
+                <h2>Áreas de Interesse</h2>
+                <p>Principais áreas de pesquisa e interesse acadêmico:</p>
+                <ul>
+                    <li><strong>Criptografia Quântica</strong></li>
+                    <li><strong>Criptografia Clássica</strong></li>
+                    <li><strong>Segurança de Redes</strong></li>
+                    <li><strong>Desenvolvimento de Software</strong></li>
+                    <li><strong>Teoria da Computação</strong></li>
+                </ul>
+            </section>
+        </article>
+    </main>
+    
+    <div id="footer-container"></div>
       
     <script src="script.js"></script>
-</body>
-<script>
-    function toggleMenu() {
-        var menu = document.getElementById("menu-h");
-        if (menu.className === "menu-hide") {
-            menu.className = "menu-show";
-        } else {
-            menu.className = "menu-hide";
+    <script>
+        window.addEventListener('load', () => {
+            loadHeader('about');
+            loadFooter();
+        });
+        
+        function toggleMenu() {
+            var menu = document.getElementById("menu-h");
+            if (menu.className === "menu-hide") {
+                menu.className = "menu-show";
+            } else {
+                menu.className = "menu-hide";
+            }
         }
-    }
-
-</script>
+    </script>
 
 </html>

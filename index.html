@@ -8,11 +8,28 @@
     <title>Aguiar</title>
     <link rel="stylesheet" type="text/css" href="./index.css" media="screen" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap">
+    <!-- LaTeX-style fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- MathJax for LaTeX support -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
 
 </head>
 
@@ -21,14 +38,26 @@
 
     <section id="text-home-container">
         <p id="text-home">What you did to be here is not the same as what you will do to the next level</p>
+        
+        <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
+            <h3>Exemplo de fórmulas LaTeX:</h3>
+            <p>Equação inline: $E = mc^2$</p>
+            <p>Equação em bloco:</p>
+            $$\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}$$
+            <p>Fórmula complexa:</p>
+            $$\frac{\partial}{\partial t} \Psi(\mathbf{r},t) = \frac{i\hbar}{2m} \nabla^2 \Psi(\mathbf{r},t) + V(\mathbf{r}) \Psi(\mathbf{r},t)$$
+        </div>
     </section>
-    <footer>
-        <span>&copy; 2024. Aguiar - Software Developer. </span>
-    </footer>
-
+    
+    <div id="footer-container"></div>
 
     <script src="script.js"></script>
     <script>
+        window.addEventListener('load', () => {
+            loadHeader('home');
+            loadFooter();
+        });
+        
         function toggleMenu() {
             var menu = document.getElementById("menu-h");
             if (menu.className === "menu-hide") 
@@ -36,7 +65,6 @@
             else 
                 menu.className = "menu-hide";
         }
-    
     </script>
     
 </body>

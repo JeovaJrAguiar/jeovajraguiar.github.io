@@ -20,22 +20,23 @@
     <section id="text-home-container">
         <p id="text-home">How is this guy?</p>
     </section>
-    <footer>
-        <span>&copy; 2024. Aguiar - Software Developer. </span>
-    </footer>
+    
+    <div id="footer-container"></div>
     
     <script src="script.js"></script>
-</body>
-
-<script>
-    function toggleMenu() {
-        var menu = document.getElementById("menu-h");
-        if (menu.className === "menu-hide")
-            menu.className = "menu-show";
-        else
-            menu.className = "menu-hide";
-    }
-
-</script>
+    <script>
+        window.addEventListener('load', () => {
+            loadHeader('volunteering');
+            loadFooter();
+        });
+        
+        function toggleMenu() {
+            var menu = document.getElementById("menu-h");
+            if (menu.className === "menu-hide")
+                menu.className = "menu-show";
+            else
+                menu.className = "menu-hide";
+        }
+    </script>
 
 </html>

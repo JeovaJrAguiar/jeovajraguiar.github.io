@@ -1,281 +1,409 @@
 :root {
-    --whiteColor: #fff;
-    --blackColor: #000;
-    --greyColor: #b3b6ba;
+    /* LaTeX-inspired color palette */
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --text-light: #333333;
+    --text-muted: #666666;
+    --accent-color: #0066cc;
+    --header-color: #2c3e50;
+    --border-color: #e0e0e0;
+    --code-bg: #f8f8f8;
+    --link-color:#0f62fe;
+    --link-visited: #8625d2;
 
-    --blueLightColor: #8be9fd;
-    --blueDarkDefaultColor: #131219;
-    --blueDarkSecundaryColor: #15141b;
-    --blueDarkTernaryColor: #1b1920;
-    --blueDarkFoscoDefaultColor: #1a191f;
-    
+    --blue60IBM: #0f62fe;
+    --purple40IBM: #be95ff;
+    --teal30IBM: #3ddbd9;
     --purpleLightColor: #8625d2;
     --pinkLightColor: #ff508f;
     --greenLightColor: #11d15e;
     --redLightColor: #dd0031;
     --orangeLightColor: #ff8c00;
+    
+    /* Typography variables */
+    --serif-font: 'Crimson Text', 'Times New Roman', Times, serif;
+    --sans-font: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --mono-font: 'Source Code Pro', 'Courier New', Courier, monospace;
 }
 
 ::selection {
-    background: #8625d2;
-    color: #fff;
+    background: var(--teal30IBM);
+    color: var(--text-color);
     text-shadow: none;
 }
 
 html {
-    font-family: Nunito, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    
+    font-family: var(--serif-font);
+    font-size: 16px;
     line-height: 1.6;
     -webkit-text-size-adjust: 100%;
-    background:  var(--blueDarkDefaultColor);
+    background: var(--background-color);
+    color: var(--text-color);
+    
+    /* LaTeX-style text rendering */
+    text-rendering: optimizeLegibility;
+    -webkit-font-feature-settings: "kern" 1, "liga" 1;
+    -moz-font-feature-settings: "kern" 1, "liga" 1;
+    font-feature-settings: "kern" 1, "liga" 1;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    max-width: 800px; /* LaTeX article width */
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    background: var(--background-color);
 }
 
 
 header {
-    color: var(--whiteColor);
-    background-color: var(--blueDarkDefaultColor);
-
-    height: 15vh;
-    padding-top: 2vh;
-    padding-left: 7vw;
-
-    display: flex;
-    overflow: hidden;
-}
-
-header > nav {
-    list-style: none;
-    padding-top: 2vh;
-
-    position: relative;
-    left: 20vw;
-
-    background-color: var(--blueDarkDefaultColor);
-}
-  
-nav li {
-  display: inline;
-  margin: 0vh 0.7rem;
-}
-  
-nav a {
-  text-decoration: none;
-  color: var(--whiteColor);
-
-  font-family: 'Roboto', sans-serif;
-    font-weight: 200;
-    font-size: 1.2rem;
-}
-
-footer nav a {
-    text-decoration: none;
-  
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    font-size: 1.2rem;
-}
-
-nav a:hover {
-    background-color: var(--whiteColor);
-    color: var(--blueDarkDefaultColor);
-    font-weight: 300;
-
-    padding: 1vh 1vw 0.6vw 1vw;
-}
-  
-nav a:active {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-}
-
-#text-home-container {
-    margin-top: 5vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    color: var(--whiteColor);
-}
-
-.proverb {
-    background-color: var(--pinkLightColor);
-    color: var(--whiteColor);
-
-    min-width: 15%;
-    max-width: 20%;
-    padding-bottom: 10vh;   
-
-    overflow: hidden;
+    color: var(--header-color);
+    background-color: var(--background-color);
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+    padding: 1rem 0;
     text-align: center;
 }
 
-.icon-nav-current {
-    background-color: var(--purpleLightColor);
-    color: var(--whiteColor);
-    font-weight: 200;
+header nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
 
-    padding: 1vh 1vw 0.6vw 1vw;
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+  
+nav li {
+    display: inline;
+    margin: 0;
+}
+  
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: var(--sans-font);
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+}
+
+nav a:hover {
+    background-color: var(--purpleLightColor);
+    color: var(--background-color);
+}
+  
+nav a:active {
+    font-family: var(--sans-font);
+    font-weight: 500;
+}
+
+#text-home-container {
+    margin: 4rem 0;
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--code-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
 }
 
 #text-home {
-    display: block;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
+    font-family: var(--serif-font);
+    font-style: italic;
     font-size: 1.2rem;
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.5;
 }
 
-
-h1, h2, h3, h4, h5, h6 {
-    color:var(--whiteColor);
-    font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+/* LaTeX-style code blocks */
+code {
+    font-family: var(--mono-font);
+    background-color: var(--code-bg);
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.9rem;
+    color: var(--text-color);
 }
 
-h1 {
-    display: block;
+pre {
+    background-color: var(--code-bg);
+    padding: 1rem;
+    border-radius: 3px;
+    border: 1px solid var(--border-color);
+    overflow-x: auto;
+    font-family: var(--mono-font);
+    line-height: 1.4;
 }
+
+pre code {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+}
+
+/* Responsive design */
 .menu-icon {
     display: none;
 }
 
+#menu-h {
+    display: block;
+}
+
 @media only screen and (max-width: 600px) {
+    body {
+        padding: 1rem 0.5rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    header > nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
     .menu-icon {
         display: inline;
         float: right;
         font-size: 24px;
         margin-right: 20px;
+        background: none;
+        border: none;
+        color: var(--text-color);
+        cursor: pointer;
     }
+    
     #menu-h {
         display: none;
     }
+    
+    #menu-h ul {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+    
     .menu-show {
         display: block !important;
     }
+    
     .menu-hide {
         display: none !important;
     }
 }
 
-footer {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 200;
-    font-size: 0.8rem;
-
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: var(--blueDarkFoscoDefaultColor);
-    color: var(--whiteColor);
-    text-align: center !important;
-    padding: 5px;
-
+/* Math support - for MathJax/KaTeX */
+.math {
+    font-family: 'Computer Modern', 'Latin Modern Math', 'STIX Two Math', serif;
 }
 
-
-
-
-h1 > .bold{
-    font-weight: bold;
-    font-size: 35px;
+/* Academic style quotations */
+blockquote {
+    margin: 2rem 0;
+    padding: 1rem 2rem;
+    border-left: 4px solid var(--accent-color);
+    background-color: var(--code-bg);
+    font-style: italic;
+    color: var(--text-light);
 }
 
-h2 > .bold{
-    font-weight: bold;
-    font-size: 30px;
-}
-
-h3 > .bold{
-    font-weight: bold;
-    font-size: 25px;
-}
-
-h4 > .bold{
-    font-weight: bold;
-    font-size: 20px;
-}
-
-h5 > .bold{
-    font-weight: bold;
-    font-size: 15px;
-}
-
-.main-subject {
-    margin-top: 5vh;
-
-    display: flex;
-    flex-direction: column;
-
-    color: var(--whiteColor);
-}
-
-.content-blog {
-    max-width: 70%;
-    display: flex;
-    overflow: hidden;
-    margin-left: 10rem;
-    
-    font-size: 20px;
-    color: var(--redLightColor);
-}
-
-.title-article {
-    font-weight:bold;
-    font-size: 35px;
-}
-
-
-.color-greyColor {
-    color: var(--greyColor);
-    text-shadow: none;
-}
-
-.color-pinkLightColor {
-    background-color: var(--blueDarkTernaryColor);
-    color: var(--pinkLightColor);
-    text-shadow: none;
-}
-
-code {
-    background-color: var(--blueDarkTernaryColor);
-    color: var(--pinkLightColor);
-    text-shadow: none;
-}
-
-
-.bg-orangeLightColor {
-    background: var(--orangeLightColor);
-    color: var(--whiteColor);
-    text-shadow: none;
-}
-
-.bg-greenLightColor {
-    background: var(--greenLightColor);
-    color: var(--whiteColor);
-    text-shadow: none;
-}
-
-.bg-purpleLightColor {
-    background: var(--purpleLightColor);
-    color: var(--whiteColor);
-    text-shadow: none;
-}
-
-italic {
+/* LaTeX-style sections */
+.abstract {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background-color: var(--code-bg);
+    border: 1px solid var(--border-color);
     font-style: italic;
 }
 
-bold {
+.abstract::before {
+    content: "Abstract";
+    display: block;
+    font-weight: bold;
+    font-style: normal;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* Remove old color classes */
+.color-greyColor {
+    color: var(--text-muted);
+}
+
+
+.icon-nav-current {
+    background-color: var(--link-color);
+    color: var(--background-color);
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+}
+/* LaTeX-style typography */
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-color);
+    font-family: var(--serif-font);
+    font-weight: bold;
+    line-height: 1.2;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-top: 2.5rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+h5, h6 {
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+p {
+    margin: 1rem 0;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+}
+
+/* LaTeX-style text elements */
+em {
+    font-style: italic;
+}
+
+strong {
     font-weight: bold;
 }
 
-
-table > thead {
-    border: var(--greyColor) solid 5px;
+/* Links */
+a {
+    color: var(--link-color);
+    text-decoration: underline;
 }
 
-table > tbody {
-    border: var(--greyColor) solid 3px;
-        font-size: 20px;
+a:hover {
+    text-decoration: none;
+}
+
+footer {
+    font-family: var(--sans-font);
+    font-size: 0.9rem;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    color: var(--text-muted);
+    background-color: var(--background-color);
+    position: relative;
+    bottom: auto;
+    left: auto;
+    width: auto;
+}
+
+/* LaTeX-style content layout */
+.main-subject {
+    margin: 2rem 0;
+    color: var(--text-color);
+}
+
+.content-blog {
+    max-width: 100%;
+    margin: 0;
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.title-article {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* LaTeX-style lists */
+ul, ol {
+    margin: 1rem 0;
+    padding-left: 2rem;
+}
+
+li {
+    margin: 0.5rem 0;
+}
+
+/* LaTeX-style tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-family: var(--sans-font);
+}
+
+table thead {
+    border-bottom: 2px solid var(--text-color);
+}
+
+table tbody {
+    border-bottom: 1px solid var(--border-color);
+}
+
+table th, table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+table th {
+    font-weight: bold;
+    background-color: var(--code-bg);
+}
+
+
+
+
+/* Utility classes for text styling */
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
 }
