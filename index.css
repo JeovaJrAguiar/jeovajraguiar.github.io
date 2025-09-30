@@ -353,6 +353,16 @@ strong {
     opacity: 0.7;
 }
 
+/* Social icons links styling */
+.secondary-subject a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.secondary-subject a:hover {
+    text-decoration: none;
+}
+
 /* Social icons container */
 .secondary-subject {
     text-align: center;
