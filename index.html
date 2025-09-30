@@ -9,10 +9,12 @@
     <link rel="stylesheet" type="text/css" href="./index.css" media="screen" />
 
     <!-- LaTeX-style fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
-    
+
     <!-- MathJax for LaTeX support -->
     <script>
         MathJax = {
@@ -29,26 +31,27 @@
     </script>
     <script type="text/javascript" id="MathJax-script" async
         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-    </script>
+        </script>
 
 </head>
 
 <body>
     <div id="header-container"></div>
 
-    <section id="text-home-container">
-        <p id="text-home">What you did to be here is not the same as what you will do to the next level</p>
-        
-        <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--border-color);">
-            <h3>Exemplo de fórmulas LaTeX:</h3>
-            <p>Equação inline: $E = mc^2$</p>
-            <p>Equação em bloco:</p>
-            $$\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}$$
-            <p>Fórmula complexa:</p>
-            $$\frac{\partial}{\partial t} \Psi(\mathbf{r},t) = \frac{i\hbar}{2m} \nabla^2 \Psi(\mathbf{r},t) + V(\mathbf{r}) \Psi(\mathbf{r},t)$$
+    <section class="content-blog">
+        <div class="main-subject" style="margin-top: 25%;">
+            <h1 class="title-article without-solid-border">Aguiar <span class="lighter">- Software Developer | Computer Science Student</span></h1>
+            <p class="color-greyColor secondary-subject">
+                Welcome to my personal portfolio
+            </p>
+            <div class="secondary-subject">
+                <img class="icon-social" src="./img/icons/github-icon.png" alt="GitHub">
+                <img class="icon-social" src="./img/icons/linkedin-icon.png" alt="LinkedIn">
+                <img class="icon-social icon-social-lattes" src="./img/icons/lattes-icon.png" alt="Lattes">
+            </div>
         </div>
     </section>
-    
+
     <div id="footer-container"></div>
 
     <script src="script.js"></script>
@@ -57,16 +60,16 @@
             loadHeader('home');
             loadFooter();
         });
-        
+
         function toggleMenu() {
             var menu = document.getElementById("menu-h");
-            if (menu.className === "menu-hide") 
+            if (menu.className === "menu-hide")
                 menu.className = "menu-show";
-            else 
+            else
                 menu.className = "menu-hide";
         }
     </script>
-    
+
 </body>
 
 </html>

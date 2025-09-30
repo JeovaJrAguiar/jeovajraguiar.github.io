@@ -276,6 +276,11 @@ h1 {
     padding-bottom: 1rem;
 }
 
+/* Border only for article titles, not homepage title */
+h1.title-article.without-solid-border {
+    border-bottom: none !important;
+}
+
 h2 {
     font-size: 1.8rem;
     margin-top: 2.5rem;
@@ -311,6 +316,48 @@ em {
 
 strong {
     font-weight: bold;
+}
+
+.normal {
+    font-weight: normal;
+}
+
+.lighter {
+    font-weight: lighter;
+}
+
+.light {
+    font-weight: 300;
+}
+
+.thin {
+    font-weight: 100;
+}
+
+/* Social icons styling */
+.icon-social {
+    width: 32px;
+    height: 32px;
+    margin: 5rem 0.5rem 0;
+    transition: opacity 0.2s ease;
+    cursor: pointer;
+}
+
+.icon-social-lattes {
+    width: 36px;
+    height: 36px;
+    margin-bottom: -2px;
+}
+
+.icon-social:hover {
+    opacity: 0.7;
+}
+
+/* Social icons container */
+.secondary-subject {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem 0;
 }
 
 /* Links */
