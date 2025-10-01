@@ -15,12 +15,20 @@ function loadHeader(pageEmphasis) {
         .then(data => {
             const params = { emphasis: pageEmphasis };
             
+            // Substitui os placeholders
             let modifiedData = data.replace(/{{\s*([^}]+)\s*}}/g, (_, key) => params[key.trim()]);
             
+            // Para GitHub Pages, ajusta apenas o caminho base se necessário
             const basePath = getBasePath();
-            
-            modifiedData = modifiedData.replace(/href="\.\//g, `href="${basePath}`);
-            modifiedData = modifiedData.replace(/href="\.\/component\/blog\/blog\.html"/g, `href="${basePath}component/blog/blog.html"`);
+            if (basePath !== './') {
+                // Substitui os links específicos apenas no GitHub Pages
+                modifiedData = modifiedData.replace(/href="\.\/"/g, `href="${basePath}"`);
+                modifiedData = modifiedData.replace(/href="\.\/projects\.html"/g, `href="${basePath}projects.html"`);
+                modifiedData = modifiedData.replace(/href="\.\/blog\.html"/g, `href="${basePath}blog.html"`);
+                modifiedData = modifiedData.replace(/href="\.\/volunteering\.html"/g, `href="${basePath}volunteering.html"`);
+                modifiedData = modifiedData.replace(/href="\.\/about\.html"/g, `href="${basePath}about.html"`);
+                modifiedData = modifiedData.replace(/href="\.\/latex-example\.html"/g, `href="${basePath}latex-example.html"`);
+            }
             
             document.getElementById('header-container').innerHTML = modifiedData;
             

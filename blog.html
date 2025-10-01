@@ -191,23 +191,23 @@ ghci> quocEResto 20 4
                         <button class="copy-button" onclick="copyCode(this)">Copiar</button>
                     </div>
                     <div class="code-content">
-                        <pre class="code-with-lines"><code><span class="code-line"><span class="haskell-comment">-- 5.1 - Versão curried da soma</span></span>
+                        <pre class="code-with-lines"><code><span class="code-line"><span class="haskell-comment">-- 1.5.1 - Versão curried da soma</span></span>
 <span class="code-line"><span class="haskell-function">somaC</span> <span class="haskell-operator">::</span> <span class="haskell-type">Num x</span> <span class="haskell-operator">=></span> <span class="haskell-type">x</span> <span class="haskell-operator">-></span> <span class="haskell-type">x</span> <span class="haskell-operator">-></span> <span class="haskell-type">x</span></span>
 <span class="code-line"><span class="haskell-function">somaC</span> <span class="haskell-keyword">x y</span> <span class="haskell-operator">=</span> <span class="haskell-keyword">x</span> <span class="haskell-operator">+</span> <span class="haskell-keyword">y</span></span>
 <span class="code-line"></span>
-<span class="code-line"><span class="haskell-comment">-- 5.2 - Versão uncurried da soma</span></span>
+<span class="code-line"><span class="haskell-comment">-- 1.5.2 - Versão uncurried da soma</span></span>
 <span class="code-line"><span class="haskell-function">somaT</span> <span class="haskell-operator">::</span> <span class="haskell-type">Num x</span> <span class="haskell-operator">=></span> <span class="haskell-operator">(</span><span class="haskell-type">x</span><span class="haskell-operator">,</span> <span class="haskell-type">x</span><span class="haskell-operator">)</span> <span class="haskell-operator">-></span> <span class="haskell-type">x</span></span>
 <span class="code-line"><span class="haskell-function">somaT</span> <span class="haskell-operator">(</span><span class="haskell-keyword">x</span><span class="haskell-operator">,</span> <span class="haskell-keyword">y</span><span class="haskell-operator">)</span> <span class="haskell-operator">=</span> <span class="haskell-keyword">x</span> <span class="haskell-operator">+</span> <span class="haskell-keyword">y</span></span>
 <span class="code-line"></span>
-<span class="code-line"><span class="haskell-comment">-- 5.3 - Aplicação parcial: soma com 10</span></span>
+<span class="code-line"><span class="haskell-comment">-- 1.5.3 - Aplicação parcial: soma com 10</span></span>
 <span class="code-line"><span class="haskell-function">soma10</span> <span class="haskell-operator">::</span> <span class="haskell-type">Integer</span> <span class="haskell-operator">-></span> <span class="haskell-type">Integer</span></span>
 <span class="code-line"><span class="haskell-function">soma10</span> <span class="haskell-keyword">x</span> <span class="haskell-operator">=</span> <span class="haskell-function">somaC</span> <span class="haskell-keyword">x</span> <span class="haskell-number">10</span></span>
 <span class="code-line"></span>
-<span class="code-line"><span class="haskell-comment">-- 5.4 - Currying somaT com curry</span></span>
+<span class="code-line"><span class="haskell-comment">-- 1.5.4 - Currying somaT com curry</span></span>
 <span class="code-line"><span class="haskell-function">somaC2</span> <span class="haskell-operator">::</span> <span class="haskell-type">Num x</span> <span class="haskell-operator">=></span> <span class="haskell-type">x</span> <span class="haskell-operator">-></span> <span class="haskell-type">x</span> <span class="haskell-operator">-></span> <span class="haskell-type">x</span></span>
 <span class="code-line"><span class="haskell-function">somaC2</span> <span class="haskell-operator">=</span> <span class="haskell-function">curry</span> <span class="haskell-function">somaT</span></span>
 <span class="code-line"></span>
-<span class="code-line"><span class="haskell-comment">-- 5.5 - Uncurrying somaC com uncurry</span></span>
+<span class="code-line"><span class="haskell-comment">-- 1.5.5 - Uncurrying somaC com uncurry</span></span>
 <span class="code-line"><span class="haskell-function">somaT2</span> <span class="haskell-operator">::</span> <span class="haskell-type">Num x</span> <span class="haskell-operator">=></span> <span class="haskell-operator">(</span><span class="haskell-type">x</span><span class="haskell-operator">,</span> <span class="haskell-type">x</span><span class="haskell-operator">)</span> <span class="haskell-operator">-></span> <span class="haskell-type">x</span></span>
 <span class="code-line"><span class="haskell-function">somaT2</span> <span class="haskell-operator">=</span> <span class="haskell-function">uncurry</span> <span class="haskell-function">somaC</span></span></code></pre>
                     </div>
