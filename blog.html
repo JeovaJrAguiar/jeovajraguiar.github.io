@@ -1,16 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Redirecionando...</title>
+    <title>Aguiar - Blog</title>
+    <link rel="stylesheet" type="text/css" href="./index.css" media="screen" />
+
+    <!-- LaTeX-style fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- MathJax for LaTeX support -->
     <script>
-        // Redirecionamento imediato via JavaScript
-        window.location.href = './component/blog/blog.html';
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
     </script>
-    <meta http-equiv="refresh" content="0; url=./component/blog/blog.html">
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+        </script>
+
 </head>
+
 <body>
-    <p>Redirecionando para o blog... <a href="./component/blog/blog.html">Clique aqui se não for redirecionado automaticamente</a>.</p>
+    <div id="header-container"></div>
+    <section class="content-blog">
+        <div class="main-subject">
+            <h1 class="title-article">Programação Dinâmica</h1>
+
+            <div class="secondary-subject">
+                <h4 class="title-article">[00] Preparando Ambiente</h4>
+                <p>
+                    Prepare seu ambiente de desenvolvimento
+                </p>
+                <div class="code-explanation">
+                    <h4>💡 Solução Explicada</h4>
+                    <p>Em Haskell, definimos funções de forma muito simples e elegante. Vamos criar as duas funções
+                        solicitadas:</p>
+                </div>
+
+                <h4 class="title-article">[1.1] Assinatura de Função - Haskell Básico</h4>
+                <h3>Faça: a) uma função chamada dobro que recebe um parâmetro x e retorna o dobro de x; b) uma função
+                    soma3 que recebe três parâmetros a, b e c e retorna a soma deles.</h3>
+
+                
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-language">Haskell</span>
+                        <button class="copy-button" onclick="copyCode(this)">Copiar</button>
+                    </div>
+                    <div class="code-content">
+                        <pre
+                            class="code-with-lines"><code><span class="code-line"><span class="haskell-comment">-- 1.a - Função que retorna o dobro de um número</span></span>
+<span class="code-line"><span class="haskell-function">dobro</span> <span class="haskell-operator">::</span> <span class="haskell-type">Num a</span> <span class="haskell-operator">=></span> <span class="haskell-type">a</span> <span class="haskell-operator">-></span> <span class="haskell-type">a</span></span>
+<span class="code-line"><span class="haskell-function">dobro</span> <span class="haskell-keyword">x</span> <span class="haskell-operator">=</span> <span class="haskell-keyword">x</span> <span class="haskell-operator">*</span> <span class="haskell-number">2</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="haskell-comment">-- 1.b - Função que soma três números</span></span>
+<span class="code-line"><span class="haskell-function">soma3</span> <span class="haskell-operator">::</span> <span class="haskell-type">Num a</span> <span class="haskell-operator">=></span> <span class="haskell-type">a</span> <span class="haskell-operator">-></span> <span class="haskell-type">a</span> <span class="haskell-operator">-></span> <span class="haskell-type">a</span> <span class="haskell-operator">-></span> <span class="haskell-type">a</span></span>
+<span class="code-line"><span class="haskell-function">soma3</span> <span class="haskell-keyword">a b c</span> <span class="haskell-operator">=</span> <span class="haskell-keyword">a</span> <span class="haskell-operator">+</span> <span class="haskell-keyword">b</span> <span class="haskell-operator">+</span> <span class="haskell-keyword">c</span></span></code></pre>
+                    </div>
+                </div>
+
+                <div class="code-output">
+                    <pre>ghci> dobro 5
+10
+ghci> soma3 2 3 4
+9
+ghci> soma3 10 (-5) 7
+12</pre>
+                </div>
+
+                <div class="code-explanation">
+                    <h4>🔍 Explicação do Código</h4>
+                    <p><strong>Tipos:</strong> <code>Num a =></code> significa que 'a' pode ser qualquer tipo numérico
+                        (Int, Float, Double, etc.)</p>
+                    <p><strong>Função dobro:</strong> Recebe um parâmetro <code>x</code> e retorna <code>x * 2</code>
+                    </p>
+                    <p><strong>Função soma3:</strong> Recebe três parâmetros <code>a b c</code> e retorna sua soma</p>
+                </div>
+
+                <h4 class="title-article">[1.2] Operadores Lógicos e Comparação</h4>
+                <h3>Usando os operadores lógicos ==, /=, >, <, >=, <=, faça as seguintes funções: a) ehZero, que retorna se um argumento n passado é zero; b) maiorQue10, que recebe um argumento n e retorna se ele é maior que 10; c) maiorQueX, que recebe um argumento n e um x e retorna se n é maior que x; d) sinalp, uma função que recebe um número n e retorna se ele é positivo.</h3>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-language">Haskell</span>
+                        <button class="copy-button" onclick="copyCode(this)">Copiar</button>
+                    </div>
+                    <div class="code-content">
+                        <pre class="code-with-lines"><code><span class="code-line"><span class="haskell-comment">-- 2.a - Verifica se o número é zero</span></span>
+<span class="code-line"><span class="haskell-function">ehZero</span> <span class="haskell-operator">::</span> <span class="haskell-type">Int</span> <span class="haskell-operator">-></span> <span class="haskell-type">Bool</span></span>
+<span class="code-line"><span class="haskell-function">ehZero</span> <span class="haskell-keyword">n</span> <span class="haskell-operator">=</span> <span class="haskell-keyword">n</span> <span class="haskell-operator">==</span> <span class="haskell-number">0</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="haskell-comment">-- 2.b - Verifica se é maior que 10</span></span>
+<span class="code-line"><span class="haskell-function">maiorQue10</span> <span class="haskell-operator">::</span> <span class="haskell-type">Integer</span> <span class="haskell-operator">-></span> <span class="haskell-type">Bool</span></span>
+<span class="code-line"><span class="haskell-function">maiorQue10</span> <span class="haskell-keyword">n</span> <span class="haskell-operator">=</span> <span class="haskell-keyword">n</span> <span class="haskell-operator">></span> <span class="haskell-number">10</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="haskell-comment">-- 2.c - Compara se x é maior que y</span></span>
+<span class="code-line"><span class="haskell-function">maiorQueX</span> <span class="haskell-operator">::</span> <span class="haskell-type">Integer</span> <span class="haskell-operator">-></span> <span class="haskell-type">Integer</span> <span class="haskell-operator">-></span> <span class="haskell-type">Bool</span></span>
+<span class="code-line"><span class="haskell-function">maiorQueX</span> <span class="haskell-keyword">x y</span> <span class="haskell-operator">=</span> <span class="haskell-keyword">x</span> <span class="haskell-operator">></span> <span class="haskell-keyword">y</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="haskell-comment">-- 2.d - Determina o sinal do número</span></span>
+<span class="code-line"><span class="haskell-function">sinalP</span> <span class="haskell-operator">::</span> <span class="haskell-operator">(</span><span class="haskell-type">Num x</span><span class="haskell-operator">,</span> <span class="haskell-type">Ord x</span><span class="haskell-operator">)</span> <span class="haskell-operator">=></span> <span class="haskell-type">x</span> <span class="haskell-operator">-></span> <span class="haskell-type">String</span></span>
+<span class="code-line"><span class="haskell-function">sinalP</span> <span class="haskell-keyword">x</span> <span class="haskell-operator">=</span> <span class="haskell-keyword">if</span> <span class="haskell-keyword">x</span> <span class="haskell-operator">></span> <span class="haskell-number">0</span> <span class="haskell-keyword">then</span> <span class="haskell-string">"positivo"</span></span>
+<span class="code-line">           <span class="haskell-keyword">else if</span> <span class="haskell-keyword">x</span> <span class="haskell-operator">==</span> <span class="haskell-number">0</span> <span class="haskell-keyword">then</span> <span class="haskell-string">"zero"</span></span>
+<span class="code-line">   <span class="haskell-keyword">else</span> <span class="haskell-string">"negativo"</span></span></code></pre>
+                    </div>
+                </div>
+
+                <div class="code-output">
+                    <pre>ghci> ehZero 0
+True
+ghci> maiorQue10 15
+True
+ghci> maiorQueX 5 3
+True
+ghci> sinalP (-5)
+"negativo"</pre>
+                </div>
+
+                <h4 class="title-article">[1.3] Trabalhando com Tuplas</h4>
+                <h3>Faça: a) uma função somaPar que recebe um tupla de valores e retorna a soma; e uma função swap que recebe uma tupla de valores e retorna a tupla com ordem trocada.</h3>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-language">Haskell</span>
+                        <button class="copy-button" onclick="copyCode(this)">Copiar</button>
+                    </div>
+                    <div class="code-content">
+                        <pre class="code-with-lines"><code><span class="code-line"><span class="haskell-comment">-- 3.a - Soma elementos de uma tupla</span></span>
+<span class="code-line"><span class="haskell-function">somarPar</span> <span class="haskell-operator">::</span> <span class="haskell-type">Num x</span> <span class="haskell-operator">=></span> <span class="haskell-operator">(</span><span class="haskell-type">x</span><span class="haskell-operator">,</span> <span class="haskell-type">x</span><span class="haskell-operator">)</span> <span class="haskell-operator">-></span> <span class="haskell-type">x</span></span>
+<span class="code-line"><span class="haskell-function">somarPar</span> <span class="haskell-operator">(</span><span class="haskell-keyword">x</span><span class="haskell-operator">,</span> <span class="haskell-keyword">y</span><span class="haskell-operator">)</span> <span class="haskell-operator">=</span> <span class="haskell-keyword">x</span> <span class="haskell-operator">+</span> <span class="haskell-keyword">y</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="haskell-comment">-- 3.b - Troca ordem dos elementos da tupla</span></span>
+<span class="code-line"><span class="haskell-function">swap</span> <span class="haskell-operator">::</span> <span class="haskell-operator">(</span><span class="haskell-type">a</span><span class="haskell-operator">,</span> <span class="haskell-type">b</span><span class="haskell-operator">)</span> <span class="haskell-operator">-></span> <span class="haskell-operator">(</span><span class="haskell-type">b</span><span class="haskell-operator">,</span> <span class="haskell-type">a</span><span class="haskell-operator">)</span></span>
+<span class="code-line"><span class="haskell-function">swap</span> <span class="haskell-operator">(</span><span class="haskell-keyword">a</span><span class="haskell-operator">,</span> <span class="haskell-keyword">b</span><span class="haskell-operator">)</span> <span class="haskell-operator">=</span> <span class="haskell-operator">(</span><span class="haskell-keyword">b</span><span class="haskell-operator">,</span> <span class="haskell-keyword">a</span><span class="haskell-operator">)</span></span></code></pre>
+                    </div>
+                </div>
+
+                <div class="code-output">
+                    <pre>ghci> somarPar (3, 7)
+10
+ghci> swap (1, 2)
+(2,1)
+ghci> swap ("hello", 42)
+(42,"hello")</pre>
+                </div>
+
+                <h4 class="title-article">[1.4] Funções com Múltiplos Retornos</h4>
+                <h3>Faça testes com as seguintes funções: div, mod, quot, rem e descubra o que elas fazem. Faça uma função chamada quocEResto que recebe dois valores x e y como argumento retorna uma tupla onde o primeiro valor é o quociente e o segundo o resto da divisão de x por y.</h3>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-language">Haskell</span>
+                        <button class="copy-button" onclick="copyCode(this)">Copiar</button>
+                    </div>
+                    <div class="code-content">
+                        <pre class="code-with-lines"><code><span class="code-line"><span class="haskell-comment">-- 4 - Retorna quociente e resto da divisão</span></span>
+<span class="code-line"><span class="haskell-function">quocEResto</span> <span class="haskell-operator">::</span> <span class="haskell-type">Integer</span> <span class="haskell-operator">-></span> <span class="haskell-type">Integer</span> <span class="haskell-operator">-></span> <span class="haskell-operator">(</span><span class="haskell-type">Integer</span><span class="haskell-operator">,</span> <span class="haskell-type">Integer</span><span class="haskell-operator">)</span></span>
+<span class="code-line"><span class="haskell-function">quocEResto</span> <span class="haskell-keyword">x y</span> <span class="haskell-operator">=</span> <span class="haskell-operator">(</span><span class="haskell-function">quot</span> <span class="haskell-keyword">x y</span><span class="haskell-operator">,</span> <span class="haskell-function">mod</span> <span class="haskell-keyword">x y</span><span class="haskell-operator">)</span></span></code></pre>
+                    </div>
+                </div>
+
+                <div class="code-output">
+                    <pre>ghci> quocEResto 17 5
+(3,2)
+ghci> quocEResto 20 4
+(5,0)</pre>
+                </div>
+
+                <h4 class="title-article">[1.5] Curry e Uncurry</h4>
+                <h3>Faça: 1. Uma versão curried da função soma chamada somaC que recebe dois argumentos x e y e retorna a soma deles; 2. Faça a versão uncurried da função soma chamada somaT que recebe uma tupla com dois elementos e retorna a soma deles; 3. Faça uma função chamada soma10, composta pela aplicação parcial da função somaC, que recebe um argumento x e retorna a soma de x + 10; 4. Faça uma função chamada somaC2 que é a versão curried de somaT, usando a função de base curry; 5. Faça uma função chamada somaT2 que é a versão uncurried do somaC, usando a função de base uncurry.</h3>
+
+                <div class="code-block">
+                    <div class="code-header">
+                        <span class="code-language">Haskell</span>
+                        <button class="copy-button" onclick="copyCode(this)">Copiar</button>
+                    </div>
+                    <div class="code-content">
+                        <pre class="code-with-lines"><code><span class="code-line"><span class="haskell-comment">-- 5.1 - Versão curried da soma</span></span>
+<span class="code-line"><span class="haskell-function">somaC</span> <span class="haskell-operator">::</span> <span class="haskell-type">Num x</span> <span class="haskell-operator">=></span> <span class="haskell-type">x</span> <span class="haskell-operator">-></span> <span class="haskell-type">x</span> <span class="haskell-operator">-></span> <span class="haskell-type">x</span></span>
+<span class="code-line"><span class="haskell-function">somaC</span> <span class="haskell-keyword">x y</span> <span class="haskell-operator">=</span> <span class="haskell-keyword">x</span> <span class="haskell-operator">+</span> <span class="haskell-keyword">y</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="haskell-comment">-- 5.2 - Versão uncurried da soma</span></span>
+<span class="code-line"><span class="haskell-function">somaT</span> <span class="haskell-operator">::</span> <span class="haskell-type">Num x</span> <span class="haskell-operator">=></span> <span class="haskell-operator">(</span><span class="haskell-type">x</span><span class="haskell-operator">,</span> <span class="haskell-type">x</span><span class="haskell-operator">)</span> <span class="haskell-operator">-></span> <span class="haskell-type">x</span></span>
+<span class="code-line"><span class="haskell-function">somaT</span> <span class="haskell-operator">(</span><span class="haskell-keyword">x</span><span class="haskell-operator">,</span> <span class="haskell-keyword">y</span><span class="haskell-operator">)</span> <span class="haskell-operator">=</span> <span class="haskell-keyword">x</span> <span class="haskell-operator">+</span> <span class="haskell-keyword">y</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="haskell-comment">-- 5.3 - Aplicação parcial: soma com 10</span></span>
+<span class="code-line"><span class="haskell-function">soma10</span> <span class="haskell-operator">::</span> <span class="haskell-type">Integer</span> <span class="haskell-operator">-></span> <span class="haskell-type">Integer</span></span>
+<span class="code-line"><span class="haskell-function">soma10</span> <span class="haskell-keyword">x</span> <span class="haskell-operator">=</span> <span class="haskell-function">somaC</span> <span class="haskell-keyword">x</span> <span class="haskell-number">10</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="haskell-comment">-- 5.4 - Currying somaT com curry</span></span>
+<span class="code-line"><span class="haskell-function">somaC2</span> <span class="haskell-operator">::</span> <span class="haskell-type">Num x</span> <span class="haskell-operator">=></span> <span class="haskell-type">x</span> <span class="haskell-operator">-></span> <span class="haskell-type">x</span> <span class="haskell-operator">-></span> <span class="haskell-type">x</span></span>
+<span class="code-line"><span class="haskell-function">somaC2</span> <span class="haskell-operator">=</span> <span class="haskell-function">curry</span> <span class="haskell-function">somaT</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="haskell-comment">-- 5.5 - Uncurrying somaC com uncurry</span></span>
+<span class="code-line"><span class="haskell-function">somaT2</span> <span class="haskell-operator">::</span> <span class="haskell-type">Num x</span> <span class="haskell-operator">=></span> <span class="haskell-operator">(</span><span class="haskell-type">x</span><span class="haskell-operator">,</span> <span class="haskell-type">x</span><span class="haskell-operator">)</span> <span class="haskell-operator">-></span> <span class="haskell-type">x</span></span>
+<span class="code-line"><span class="haskell-function">somaT2</span> <span class="haskell-operator">=</span> <span class="haskell-function">uncurry</span> <span class="haskell-function">somaC</span></span></code></pre>
+                    </div>
+                </div>
+
+                <div class="code-output">
+                    <pre>ghci> somaC 3 7
+10
+ghci> somaT (3, 7)
+10
+ghci> soma10 5
+15
+ghci> somaC2 4 6
+10
+ghci> somaT2 (4, 6)
+10</pre>
+                </div>
+
+                <div class="code-explanation">
+                    <h4>🎯 Conceitos Importantes</h4>
+                    <p><strong>Currying:</strong> Transformar uma função que recebe uma tupla em uma função que recebe argumentos separados</p>
+                    <p><strong>Uncurrying:</strong> O processo inverso - transformar função curried em função que recebe tupla</p>
+                    <p><strong>Aplicação Parcial:</strong> <code>soma10</code> é um exemplo de como criar funções especializadas</p>
+                </div>
+                <div class="secondary-subject">
+                </div>
+    </section>
+
+    <div id="footer-container"></div>
+
+    <script src="./script.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            loadHeader('blog');
+            loadFooter();
+        });
+
+        function toggleMenu() {
+            var menu = document.getElementById("menu-h");
+            if (menu.className === "menu-hide") {
+                menu.className = "menu-show";
+            } else {
+                menu.className = "menu-hide";
+            }
+        }
+
+        // Função para copiar código
+        function copyCode(button) {
+            const codeBlock = button.closest('.code-block');
+            const codeContent = codeBlock.querySelector('pre code');
+            const text = codeContent.textContent;
+
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = button.textContent;
+                button.textContent = 'Copiado!';
+                button.style.background = '#28a745';
+
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.style.background = '';
+                }, 2000);
+            }).catch(err => {
+                console.error('Erro ao copiar:', err);
+                button.textContent = 'Erro';
+                setTimeout(() => {
+                    button.textContent = 'Copiar';
+                }, 2000);
+            });
+        }
+    </script>
+
 </body>
 </html>

@@ -66,6 +66,7 @@ function loadFooter() {
         });
 }
 
+// Função para determinar o caminho base correto
 function getBasePath() {
     const isLocal = window.location.protocol === 'file:' || 
                    window.location.hostname === '' || 
@@ -73,23 +74,15 @@ function getBasePath() {
                    window.location.hostname.startsWith('127.');
     
     if (isLocal) {
-        const currentPath = window.location.pathname;
-        if (currentPath.includes('/component/')) {
-            return '../../';
-        } else {
-            return './';
-        }
+        // Para desenvolvimento local, sempre usa caminhos relativos simples
+        return './';
     } else {
+        // Para GitHub Pages, usa caminho absoluto do repositório
         if (window.location.hostname.includes('github.io')) {
-            const currentPath = window.location.pathname;
-            if (currentPath.includes('/component/')) {
-                return '/jeovajraguiar.github.io/';
-            } else {
-                return '/jeovajraguiar.github.io/';
-            }
+            return '/jeovajraguiar.github.io/';
         } else {
-            const currentPath = window.location.pathname;
-            return currentPath.includes('/component/') ? '../../' : './';
+            // Fallback para outros servidores
+            return './';
         }
     }
 }
