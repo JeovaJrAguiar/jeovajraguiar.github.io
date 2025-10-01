@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aguiar - Exemplos de Código</title>
+    <link rel="stylesheet" type="text/css" href="./index.css" media="screen" />
+
+    <!-- LaTeX-style fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- MathJax for LaTeX support -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+            }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+</head>
+
+<body>
+    <div id="header-container"></div>
+    
+    <main>
+        <h1>Guia de Estilos de Código</h1>
+        <p class="lead">Exemplos de como usar os blocos de código no estilo LaTeX acadêmico.</p>
+
+        <h2>1. Código Inline</h2>
+        <p>Para código pequeno, use: <code>dobro x = x * 2</code> dentro do texto.</p>
+
+        <h2>2. Bloco de Código Simples</h2>
+        <pre><code>-- Função simples
+factorial 0 = 1
+factorial n = n * factorial (n - 1)</code></pre>
+
+        <h2>3. Bloco de Código Avançado com Header</h2>
+        
+        <div class="code-block">
+            <div class="code-header">
+                <span class="code-language">Haskell</span>
+                <button class="copy-button" onclick="copyCode(this)">Copiar</button>
+            </div>
+            <div class="code-content">
+                <pre><code><span class="haskell-comment">-- Quicksort em Haskell</span>
+<span class="haskell-function">quicksort</span> <span class="haskell-operator">::</span> <span class="haskell-type">Ord a</span> <span class="haskell-operator">=></span> <span class="haskell-operator">[</span><span class="haskell-type">a</span><span class="haskell-operator">]</span> <span class="haskell-operator">-></span> <span class="haskell-operator">[</span><span class="haskell-type">a</span><span class="haskell-operator">]</span>
+<span class="haskell-function">quicksort</span> <span class="haskell-operator">[]</span> <span class="haskell-operator">=</span> <span class="haskell-operator">[]</span>
+<span class="haskell-function">quicksort</span> <span class="haskell-operator">(</span><span class="haskell-keyword">x</span><span class="haskell-operator">:</span><span class="haskell-keyword">xs</span><span class="haskell-operator">)</span> <span class="haskell-operator">=</span> <span class="haskell-function">quicksort</span> <span class="haskell-keyword">smaller</span> <span class="haskell-operator">++</span> <span class="haskell-operator">[</span><span class="haskell-keyword">x</span><span class="haskell-operator">]</span> <span class="haskell-operator">++</span> <span class="haskell-function">quicksort</span> <span class="haskell-keyword">larger</span>
+  <span class="haskell-keyword">where</span> <span class="haskell-keyword">smaller</span> <span class="haskell-operator">=</span> <span class="haskell-operator">[</span><span class="haskell-keyword">a</span> <span class="haskell-operator">|</span> <span class="haskell-keyword">a</span> <span class="haskell-operator"><-</span> <span class="haskell-keyword">xs</span><span class="haskell-operator">,</span> <span class="haskell-keyword">a</span> <span class="haskell-operator"><=</span> <span class="haskell-keyword">x</span><span class="haskell-operator">]</span>
+        <span class="haskell-keyword">larger</span>  <span class="haskell-operator">=</span> <span class="haskell-operator">[</span><span class="haskell-keyword">a</span> <span class="haskell-operator">|</span> <span class="haskell-keyword">a</span> <span class="haskell-operator"><-</span> <span class="haskell-keyword">xs</span><span class="haskell-operator">,</span> <span class="haskell-keyword">a</span> <span class="haskell-operator">></span> <span class="haskell-keyword">x</span><span class="haskell-operator">]</span></code></pre>
+            </div>
+        </div>
+
+        <h2>4. Bloco com Números de Linha</h2>
+        
+        <div class="code-block">
+            <div class="code-header">
+                <span class="code-language">Haskell - Fibonacci</span>
+                <button class="copy-button" onclick="copyCode(this)">Copiar</button>
+            </div>
+            <div class="code-content">
+                <pre class="code-with-lines"><code><span class="code-line"><span class="haskell-comment">-- Sequência de Fibonacci</span></span>
+<span class="code-line"><span class="haskell-function">fibonacci</span> <span class="haskell-operator">::</span> <span class="haskell-type">Integer</span> <span class="haskell-operator">-></span> <span class="haskell-type">Integer</span></span>
+<span class="code-line"><span class="haskell-function">fibonacci</span> <span class="haskell-number">0</span> <span class="haskell-operator">=</span> <span class="haskell-number">0</span></span>
+<span class="code-line"><span class="haskell-function">fibonacci</span> <span class="haskell-number">1</span> <span class="haskell-operator">=</span> <span class="haskell-number">1</span></span>
+<span class="code-line"><span class="haskell-function">fibonacci</span> <span class="haskell-keyword">n</span> <span class="haskell-operator">=</span> <span class="haskell-function">fibonacci</span> <span class="haskell-operator">(</span><span class="haskell-keyword">n</span><span class="haskell-operator">-</span><span class="haskell-number">1</span><span class="haskell-operator">)</span> <span class="haskell-operator">+</span> <span class="haskell-function">fibonacci</span> <span class="haskell-operator">(</span><span class="haskell-keyword">n</span><span class="haskell-operator">-</span><span class="haskell-number">2</span><span class="haskell-operator">)</span></span></code></pre>
+            </div>
+        </div>
+
+        <h2>5. Output/Resultado</h2>
+        
+        <div class="code-output">
+            <pre>ghci> quicksort [3,1,4,1,5,9,2,6]
+[1,1,2,3,4,5,6,9]
+
+ghci> fibonacci 10
+55</pre>
+        </div>
+
+        <h2>6. Explicação Destacada</h2>
+        
+        <div class="code-explanation">
+            <h4>🎯 Pontos Importantes</h4>
+            <p>O algoritmo Quicksort em Haskell demonstra a elegância da programação funcional:</p>
+            <ul>
+                <li><strong>Pattern matching:</strong> <code>[]</code> e <code>(x:xs)</code></li>
+                <li><strong>List comprehensions:</strong> <code>[a | a <- xs, a <= x]</code></li>
+                <li><strong>Recursão:</strong> Chamadas recursivas naturais</li>
+            </ul>
+        </div>
+
+        <h2>7. Múltiplas Linguagens</h2>
+        
+        <div class="code-block">
+            <div class="code-header">
+                <span class="code-language">Python</span>
+                <button class="copy-button" onclick="copyCode(this)">Copiar</button>
+            </div>
+            <div class="code-content">
+                <pre><code><span class="haskell-comment"># Mesmo algoritmo em Python</span>
+<span class="haskell-keyword">def</span> <span class="haskell-function">quicksort</span>(arr):
+    <span class="haskell-keyword">if</span> <span class="haskell-function">len</span>(arr) <= <span class="haskell-number">1</span>:
+        <span class="haskell-keyword">return</span> arr
+    
+    pivot = arr[<span class="haskell-function">len</span>(arr) // <span class="haskell-number">2</span>]
+    left = [x <span class="haskell-keyword">for</span> x <span class="haskell-keyword">in</span> arr <span class="haskell-keyword">if</span> x < pivot]
+    middle = [x <span class="haskell-keyword">for</span> x <span class="haskell-keyword">in</span> arr <span class="haskell-keyword">if</span> x == pivot]
+    right = [x <span class="haskell-keyword">for</span> x <span class="haskell-keyword">in</span> arr <span class="haskell-keyword">if</span> x > pivot]
+    
+    <span class="haskell-keyword">return</span> <span class="haskell-function">quicksort</span>(left) + middle + <span class="haskell-function">quicksort</span>(right)</code></pre>
+            </div>
+        </div>
+
+        <h2>Como Usar</h2>
+        
+        <div class="code-explanation">
+            <h4>📚 Templates Prontos</h4>
+            <p>Copie e cole estes templates no seu blog:</p>
+        </div>
+
+        <h3>Template Básico:</h3>
+        <pre><code>&lt;div class="code-block"&gt;
+    &lt;div class="code-header"&gt;
+        &lt;span class="code-language"&gt;Haskell&lt;/span&gt;
+        &lt;button class="copy-button" onclick="copyCode(this)"&gt;Copiar&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div class="code-content"&gt;
+        &lt;pre&gt;&lt;code&gt;-- Seu código aqui&lt;/code&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <h3>Template com Syntax Highlighting:</h3>
+        <pre><code>&lt;span class="haskell-function"&gt;nomeFuncao&lt;/span&gt;
+&lt;span class="haskell-keyword"&gt;where&lt;/span&gt;
+&lt;span class="haskell-type"&gt;Int&lt;/span&gt;
+&lt;span class="haskell-operator"&gt;::&lt;/span&gt;
+&lt;span class="haskell-number"&gt;42&lt;/span&gt;
+&lt;span class="haskell-string"&gt;"texto"&lt;/span&gt;
+&lt;span class="haskell-comment"&gt;-- comentário&lt;/span&gt;</code></pre>
+
+    </main>
+
+    <div id="footer-container"></div>
+    
+    <script src="./script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            loadHeader('code-examples');
+            loadFooter();
+        });
+
+        // Função para copiar código
+        function copyCode(button) {
+            const codeBlock = button.closest('.code-block');
+            const codeContent = codeBlock.querySelector('pre code');
+            const text = codeContent.textContent;
+            
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = button.textContent;
+                button.textContent = 'Copiado!';
+                button.style.background = '#28a745';
+                
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.style.background = '';
+                }, 2000);
+            }).catch(err => {
+                console.error('Erro ao copiar:', err);
+                button.textContent = 'Erro';
+                setTimeout(() => {
+                    button.textContent = 'Copiar';
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>

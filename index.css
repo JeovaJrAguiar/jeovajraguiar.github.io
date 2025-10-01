@@ -147,12 +147,182 @@ pre {
     overflow-x: auto;
     font-family: var(--mono-font);
     line-height: 1.4;
+    margin: 1rem 0;
 }
 
 pre code {
     background: none;
     padding: 0;
     border-radius: 0;
+}
+
+/* Advanced code blocks for programming tutorials */
+.code-block {
+    position: relative;
+    margin: 1.5rem 0;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background: var(--background-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.code-header {
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.75rem 1rem;
+    border-radius: 6px 6px 0 0;
+    font-family: var(--sans-font);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.code-language {
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.code-content {
+    position: relative;
+}
+
+.code-content pre {
+    margin: 0;
+    border: none;
+    border-radius: 0 0 6px 6px;
+    background: #fefefe;
+    padding: 1.25rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Line numbers for code blocks */
+.code-with-lines {
+    counter-reset: line-number;
+}
+
+.code-with-lines .code-line {
+    display: block;
+    counter-increment: line-number;
+    position: relative;
+    padding-left: 3rem;
+}
+
+.code-with-lines .code-line::before {
+    content: counter(line-number);
+    position: absolute;
+    left: 0;
+    width: 2.5rem;
+    text-align: right;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    user-select: none;
+    border-right: 1px solid var(--border-color);
+    padding-right: 0.5rem;
+}
+
+/* Syntax highlighting for Haskell - Manual colors */
+.haskell-keyword {
+    color: #0066cc;
+    font-weight: 600;
+}
+
+.haskell-function {
+    color: #8b4513;
+    font-weight: 500;
+}
+
+.haskell-type {
+    color: #228b22;
+    font-style: italic;
+}
+
+.haskell-string {
+    color: #8b0000;
+}
+
+.haskell-number {
+    color: #ff6600;
+}
+
+.haskell-comment {
+    color: var(--text-muted);
+    font-style: italic;
+}
+
+.haskell-operator {
+    color: #8b008b;
+    font-weight: 500;
+}
+
+/* Code output/result blocks */
+.code-output {
+    background: #f0f8ff;
+    border: 1px solid #b0d4f1;
+    border-radius: 4px;
+    padding: 1rem;
+    margin: 1rem 0;
+    font-family: var(--mono-font);
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.code-output::before {
+    content: "Output:";
+    position: absolute;
+    top: -0.5rem;
+    left: 1rem;
+    background: var(--background-color);
+    padding: 0 0.5rem;
+    font-family: var(--sans-font);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Interactive code elements */
+.code-explanation {
+    background: #fffef7;
+    border-left: 4px solid #ffd700;
+    padding: 1rem;
+    margin: 1rem 0;
+    font-family: var(--serif-font);
+    border-radius: 0 4px 4px 0;
+}
+
+.code-explanation h4 {
+    margin-top: 0;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+/* Copy button for code blocks */
+.copy-button {
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 0.3rem 0.6rem;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.code-block:hover .copy-button {
+    opacity: 1;
+}
+
+.copy-button:hover {
+    background: var(--header-color);
 }
 
 /* Responsive design */
