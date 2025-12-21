@@ -64,6 +64,9 @@ function loadFooter() {
 function toggleMenu() {
     const nav = document.getElementById('menu-h');
     if (nav) {
-        nav.classList.toggle('active');
+        // Toggle the 'menu-show' class used by CSS - this avoids relying on exact className equality
+        nav.classList.toggle('menu-show');
+        // Ensure 'menu-hide' class is not present to prevent conflicts
+        nav.classList.remove('menu-hide');
     }
 }
